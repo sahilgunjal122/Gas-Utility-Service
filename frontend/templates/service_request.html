@@ -1,0 +1,11 @@
+<form method="POST" action="{% url 'submit_request' %}">
+    {% csrf_token %}
+    
+    <label for="request_type">Request Type:</label>
+    <input type="text" name="request_type" required>
+
+    <label for="description">Description:</label>
+    <textarea name="description" required></textarea>
+
+    <button type="submit">Submit Request</button>
+</form>
